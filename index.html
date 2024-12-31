@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MealMatch</title>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS
+    emailjs.init("0PuAP4Yw9gwGQ-JFO");
+
+    // Function to send an email
+    function sendEmail(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      emailjs.send("service_2co2gpe", "template_lipq3f1", {
+        name: name,
+        email: email,
+        message: message,
+      }).then(() => {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      }).catch(error => {
+        alert("Failed to send message: " + error.text);
+      });
+    }
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    section {
+      padding: 1.5rem;
+    }
+    .qr-code img {
+      width: 200px;
+      height: 200px;
+    }
+    form {
+      max-width: 500px;
+      margin: 1rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    input, textarea, button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to MealMatch</h1>
+  </header>
+  
+  <section>
+    <h2>About MealMatch</h2>
+    <p>Just an app that tries to make on-campus dining more affordable.</p>
+  </section>
+  
+  <section class="qr-code">
+    <h2>Download Our App</h2>
+    <p>Scan the QR code below or click the link to download:</p>
+    <img src="MealMatchLogo.png" alt="QR Code to download the app">
+    <p><a href="MealMatch Download Link" target="_blank">Download MealMatch</a></p>
+  </section>
+  
+  <section>
+    <h2>Contact Us</h2>
+    <form id="contact-form" onsubmit="sendEmail(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+</body>
+</html>
