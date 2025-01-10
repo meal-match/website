@@ -30,25 +30,40 @@
     }
   </script>
   <style>
+    /* General body styling */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
+
+      /* Flexbox to center content */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
+
     header {
       background-color: #4CAF50;
       color: white;
       padding: 1rem;
       text-align: center;
+      width: 100%;
     }
+
     section {
       padding: 1.5rem;
+      text-align: center; /* Center text inside sections */
     }
+
     .qr-code img {
       width: 200px;
       height: 200px;
+      margin: 1rem 0;
     }
+
     form {
       max-width: 500px;
       margin: 1rem auto;
@@ -57,6 +72,7 @@
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
     input, textarea, button {
       width: 100%;
       margin-bottom: 1rem;
@@ -64,12 +80,14 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+
     button {
       background-color: #4CAF50;
       color: white;
       border: none;
       cursor: pointer;
     }
+
     button:hover {
       background-color: #45a049;
     }
@@ -77,19 +95,19 @@
 </head>
 <body>
   <header>
-    <h1>Welcome to MealMatch</h1>
+    <img src="MealMatchLogo.png" alt="QR Code to download the app">
   </header>
   
   <section>
-    <h2>About MealMatch</h2>
-    <p>Just an app that tries to make on-campus dining more affordable.</p>
+    <h2>Welcome to MealMatch</h2>
+    <p>An app that tries to make on-campus dining more affordable.</p>
   </section>
   
   <section class="qr-code">
     <h2>Download Our App</h2>
     <p>Scan the QR code below or click the link to download:</p>
     <img src="MealMatchLogo.png" alt="QR Code to download the app">
-    <p><a href="MealMatch Download Link" target="_blank">Download MealMatch</a></p>
+    <p>QR Code not working? Click <a href="MealMatch Download Link" target="_blank">here</a></p>
   </section>
   
   <section>
