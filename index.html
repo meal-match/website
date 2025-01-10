@@ -21,12 +21,15 @@
         name: name,
         email: email,
         message: message,
-      }).then(() => {
-        alert("Message sent successfully!");
-        document.getElementById("contact-form").reset();
-      }).catch(error => {
-        alert("Failed to send message: " + error.text);
-      });
+      }).then(
+        (response) => {
+          alert("Message sent successfully!");
+          document.getElementById("contact-form").reset();
+        },
+        (error) => {
+          alert("Failed to send message: " + error.text);
+        }
+      );
     }
   </script>
   <style>
