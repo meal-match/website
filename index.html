@@ -4,34 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MealMatch</title>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    // Initialize EmailJS
-    emailjs.init("0PuAP4Yw9gwGQ-JFO");
-
-    // Function to send an email
-    function sendEmail(event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-
-      emailjs.send("service_2co2gpe", "template_lipq3f1", {
-        name: name,
-        email: email,
-        message: message,
-      }).then(
-        (response) => {
-          alert("Message sent successfully!");
-          document.getElementById("contact-form").reset();
-        },
-        (error) => {
-          alert("Failed to send message: " + error.text);
-        }
-      );
-    }
-  </script>
   <style>
     /* General body styling */
     body {
@@ -39,7 +11,7 @@
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
-  
+
       /* Flexbox to center content */
       display: flex;
       flex-direction: column;
@@ -49,7 +21,7 @@
 
       font-size: 18px;
     }
-  
+
     header {
       background-color: #9E1B32;
       color: white;
@@ -60,30 +32,30 @@
       justify-content: space-between;
       box-sizing: border-box;
     }
-  
+
     header .logo {
       max-height: 50px; /* Smaller logo size */
       margin-left: 1rem;
     }
-  
+
     header h1 {
       flex-grow: 2; /* Allows the title to center properly */
       text-align: center;
       margin: 0;
       font-size: 1.5rem;
     }
-  
+
     section {
       padding: 1.5rem;
       text-align: center; /* Center text inside sections */
     }
-  
+
     .qr-code img {
       width: 200px;
       height: 200px;
       margin: 1rem 0;
     }
-  
+
     form {
       max-width: 500px;
       margin: 1rem auto;
@@ -92,7 +64,7 @@
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
-  
+
     input, textarea, button {
       width: 100%;
       margin-bottom: 1rem;
@@ -100,18 +72,18 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
-  
+
     button {
       background-color: #000000;
       color: white;
       border: none;
       cursor: pointer;
     }
-  
+
     button:hover {
       background-color: #9E1B32;
     }
-  </style>  
+  </style>
 </head>
 <body>
   <header>
@@ -139,5 +111,39 @@
       <button type="submit">Send Message</button>
     </form>
   </section>
+
+  <!-- EmailJS Scripts -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // Initialize EmailJS with your public key
+      emailjs.init({
+        publicKey: "0PuAP4Yw9gwGQ-JFO", // Replace with your actual public key
+      });
+    })();
+
+    // Function to send an email
+    function sendEmail(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      emailjs.send("service_2co2gpe", "template_lipq3f1", {
+        name: name,
+        email: email,
+        message: message,
+      }).then(
+        () => {
+          alert("Message sent successfully!");
+          document.getElementById("contact-form").reset();
+        },
+        (error) => {
+          alert("Failed to send message: " + error.text);
+        }
+      );
+    }
+  </script>
 </body>
 </html>
