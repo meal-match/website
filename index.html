@@ -35,12 +35,12 @@
     }
 
     header .logo {
-      max-height: 100px; /* Smaller logo size */
+      max-height: 100px; 
       margin-left: 1rem;
     }
 
     header h1 {
-      flex-grow: 2; /* Allows the title to center properly */
+      flex-grow: 2; 
       text-align: center;
       margin: 0;
       font-size: 1.5rem;
@@ -48,7 +48,7 @@
 
     section {
       padding: 1.5rem;
-      text-align: center; /* Center text inside sections */
+      text-align: center; 
     }
 
     .qr-code img {
@@ -86,8 +86,8 @@
     }
 
     .small-text {
-      font-size: 0.8rem; /* Adjust the size as needed */
-      color: #555; /* Optional: change the text color to make it subtler */
+      font-size: 0.8rem; 
+      color: #555;
     }
 
     footer {
@@ -109,6 +109,10 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    main {
+      flex: 1;
+    }
   </style>
 </head>
 <body>
@@ -116,27 +120,29 @@
     <img src="MealMatchLogoIcon.png" alt="Logo" class="logo">
   </header>
   
-  <section>
-    <h2>Welcome to MealMatch</h2>
-    <p>An app that tries to make on-campus dining more affordable.</p>
-  </section>
-  
-  <section class="qr-code">
-    <h2>Download The App</h2>
-    <p>Scan the QR code!</p>
-    <img src="MealMatchLogo.png" alt="QR Code to download the app">
-    <p class="small-text">QR Code not working? Click <a href="MealMatch Download Link" target="_blank">here</a>.</p>
-  </section>
-  
-  <section>
-    <h2>Contact Us</h2>
-    <form id="contact-form" onsubmit="sendEmail(event)">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+  <main>
+    <section>
+      <h2>Welcome to MealMatch</h2>
+      <p>An app that tries to make on-campus dining more affordable.</p>
+    </section>
+    
+    <section class="qr-code">
+      <h2>Download The App</h2>
+      <p>Scan the QR code!</p>
+      <img src="MealMatchLogo.png" alt="QR Code to download the app">
+      <p class="small-text">QR Code not working? Click <a href="MealMatch Download Link" target="_blank">here</a>.</p>
+    </section>
+    
+    <section>
+      <h2>Contact Us</h2>
+      <form id="contact-form" onsubmit="sendEmail(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
     <p><a href="https://www.privacypolicies.com/live/c27eaadc-e241-48ce-be38-3be7315d7cdf" target="_blank">Privacy Policy</a></p>
