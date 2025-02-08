@@ -138,8 +138,7 @@ body {
   /* How It Works section styling */
   .process {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    gap: 2rem; /* Space between the two columns */
     margin-top: 1.5rem;
   }
   
@@ -148,6 +147,7 @@ body {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Each section takes equal width */
   }
   
   .buy-meal h3, .sell-meal h3 {
@@ -173,6 +173,13 @@ body {
   .buy-meal ul li ul li, .sell-meal ul li ul li {
     margin-bottom: 0.5rem;
     color: #555;
+  }
+  
+  /* Responsive layout for smaller screens */
+  @media (max-width: 768px) {
+    .process {
+      flex-direction: column; /* Stack vertically on smaller screens */
+    }
   }
   
   /* Form styling */
