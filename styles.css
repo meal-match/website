@@ -40,7 +40,7 @@ body {
   .logo-container {
     display: flex;
     align-items: center; /* Align logo and title vertically */
-    gap: 1rem; /* Add space between logo and title */
+    gap: 0.5rem; /* Reduced gap between logo and title */
   }
   
   header h1 {
@@ -55,6 +55,7 @@ body {
     font-weight: bold;
     color: white;
     margin: 0;
+    margin-left: 0.5rem; /* Optional: Add a small margin if needed */
   }
   
   section {
