@@ -13,11 +13,11 @@
       <img src="MealMatchLogoIcon.png" alt="Logo" class="logo">
       <h1 class="header-title">MealMatch</h1>
     </div>
-    <div class="spacer"></div> <!-- This pushes the nav to the right -->
+    <div class="spacer"></div>
     <nav>
       <ul class="nav-links">
-        <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#download">Download</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#help">Help</a></li>
       </ul>
       <div class="hamburger" onclick="toggleMenu()">
@@ -42,7 +42,7 @@
     </section>
     
     <section id="help">
-      <h2>Contact Us</h2>
+      <h2>Questions? Contact Us!</h2>
       <form id="contact-form" onsubmit="sendEmail(event)">
         <input type="text" id="name" placeholder="Your Name" required>
         <input type="email" id="email" placeholder="Your Email" required>
@@ -60,10 +60,33 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
   <script>
+    // Function to toggle the mobile menu
     function toggleMenu() {
       const navLinks = document.querySelector('.nav-links');
       navLinks.classList.toggle('active');
     }
+
+    // Function to handle smooth scrolling with an offset
+    function smoothScroll(target) {
+      const headerHeight = document.querySelector('header').offsetHeight; // Get header height
+      const targetElement = document.querySelector(target); // Get the target section
+      if (targetElement) {
+        const offsetPosition = targetElement.offsetTop - headerHeight; // Calculate offset
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth' // Smooth scroll
+        });
+      }
+    }
+
+    // Add event listeners to navigation links
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent default anchor behavior
+        const target = link.getAttribute('href'); // Get the target section ID
+        smoothScroll(target); // Call the smooth scroll function
+      });
+    });
   </script>
 </body>
 </html>
