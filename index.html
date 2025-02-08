@@ -11,25 +11,37 @@
   <header>
     <div class="logo-container">
       <img src="MealMatchLogoIcon.png" alt="Logo" class="logo">
+      <h1 class="header-title">MealMatch</h1>
     </div>
-    <h1 class="header-title">MealMatch</h1>
-    <div class="spacer"></div> <!-- This creates balance -->
-  </header>  
-  
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#download">Download</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#help">Help</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="spacer"></div>
+  </header>
+
   <main>
-    <section>
+    <section id="how-it-works">
       <h2>Welcome to MealMatch!</h2>
       <p>An app that tries to make on-campus dining more affordable.</p>
     </section>
     
-    <section class="qr-code">
+    <section id="download" class="qr-code">
       <h2>Download The App</h2>
       <p>Scan the QR code!</p>
       <img src="MealMatchLogo.png" alt="QR Code to download the app">
       <p class="small-text">QR Code not working? Click <a href="MealMatch Download Link" target="_blank">here</a>.</p>
     </section>
     
-    <section>
+    <section id="help">
       <h2>Contact Us</h2>
       <form id="contact-form" onsubmit="sendEmail(event)">
         <input type="text" id="name" placeholder="Your Name" required>
@@ -47,5 +59,11 @@
   <!-- EmailJS Scripts -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>

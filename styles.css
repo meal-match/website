@@ -40,8 +40,8 @@ body {
   
   .logo-container {
     display: flex;
-    align-items: center; /* Align logo and title vertically */
-    gap: 0.5rem; /* Reduced gap between logo and title */
+    align-items: center;
+    gap: 0.5rem;
   }
   
   .header-title {
@@ -49,11 +49,73 @@ body {
     font-weight: bold;
     color: white;
     margin: 0;
-    margin-left: 0.5rem; /* Optional: Add a small margin if needed */
+    margin-left: 0.5rem;
   }
   
   .spacer {
-    flex: 1; /* This will push the logo and title to the left */
+    flex: 1;
+  }
+  
+  /* Navigation styling */
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .nav-links li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hamburger menu styling */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #9E1B32;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
   }
   
   /* Main content styling */
@@ -67,11 +129,11 @@ body {
   section {
     padding: 1.5rem;
     text-align: center;
-    background: white; /* White background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin: 1rem 1.5rem; /* Add margin to separate sections and sides */
-    max-width: calc(100% - 3rem); /* Make sections wider, leaving ~1 inch margin */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 1.5rem;
+    max-width: calc(100% - 3rem);
   }
   
   .qr-code img {
