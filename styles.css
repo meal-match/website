@@ -165,7 +165,7 @@ body {
     margin-bottom: 1rem;
     padding-left: 0; /* Remove default padding */
     display: flex; /* Align icon and text horizontally */
-    align-items: flex-start; /* Align items to the top */
+    align-items: center; /* Vertically center the icon and text */
   }
   
   .buy-meal ul li ul, .sell-meal ul li ul {
@@ -184,7 +184,8 @@ body {
   .icon {
     margin-right: 0.75rem; /* Space between icon and text */
     color: #9E1B32; /* Match the header color */
-    font-size: 1.25rem; /* Adjust icon size */
+    font-size: 1.5rem; /* Increase icon size */
+    flex-shrink: 0; /* Prevent the icon from shrinking */
   }
   
   /* Responsive layout for smaller screens */
