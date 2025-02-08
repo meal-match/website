@@ -53,13 +53,14 @@ body {
   }
   
   .spacer {
-    flex: 1;
+    flex: 1; /* This pushes the nav to the right */
   }
   
   /* Navigation styling */
   nav {
     display: flex;
     align-items: center;
+    margin-right: 1.5rem; /* Add some margin to the right */
   }
   
   .nav-links {
