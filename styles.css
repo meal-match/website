@@ -23,7 +23,6 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     box-sizing: border-box;
     position: fixed;
     top: 0;
@@ -39,9 +38,9 @@ body {
   }
   
   .logo-container {
-    flex: 1; 
     display: flex;
-    justify-content: flex-start; 
+    align-items: center; /* Align logo and title vertically */
+    gap: 1rem; /* Add space between logo and title */
   }
   
   header h1 {
@@ -52,8 +51,6 @@ body {
   }
   
   .header-title {
-    flex: 2; /* More space for the title */
-    text-align: center;
     font-size: 1.8rem;
     font-weight: bold;
     color: white;
