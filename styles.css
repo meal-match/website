@@ -170,20 +170,9 @@ body {
   
   .buy-meal ul li ul, .sell-meal ul li ul {
     margin-top: 0.5rem;
-    margin-left: 1.5rem; /* Indent nested lists */
+    margin-left: 2rem; /* Indent nested lists */
     padding-left: 1rem; /* Add padding for the vertical line */
     border-left: 2px solid rgba(0, 0, 0, 0.1); /* Faded gray vertical line */
-    position: relative; /* For pseudo-element positioning */
-  }
-  
-  .buy-meal ul li ul::before, .sell-meal ul li ul::before {
-    content: '';
-    position: absolute;
-    left: -1.5rem; /* Align with the parent list item */
-    top: 0;
-    bottom: 0;
-    width: 2px; /* Same as border-left width */
-    background-color: rgba(0, 0, 0, 0.1); /* Faded gray color */
   }
   
   .buy-meal ul li ul li, .sell-meal ul li ul li {
