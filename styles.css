@@ -63,9 +63,15 @@ body {
     padding-top: 250px;
   }
   
+  /* Section styling */
   section {
     padding: 1.5rem;
-    text-align: center; 
+    text-align: center;
+    background: white; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: 1rem auto; /* Add margin to separate sections */
+    max-width: 800px; /* Limit width for better readability */
   }
   
   .qr-code img {
@@ -74,6 +80,7 @@ body {
     margin: 1rem 0;
   }
   
+  /* Form styling */
   form {
     max-width: 500px;
     margin: 1rem auto;
