@@ -16,6 +16,7 @@ body {
     padding: 0;
   }
   
+  /* Header styling */
   header {
     background-color: #9E1B32;
     color: white;
@@ -43,19 +44,23 @@ body {
     gap: 0.5rem; /* Reduced gap between logo and title */
   }
   
-  header h1 {
-    flex-grow: 2; 
-    text-align: center;
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  
   .header-title {
     font-size: 1.8rem;
     font-weight: bold;
     color: white;
     margin: 0;
     margin-left: 0.5rem; /* Optional: Add a small margin if needed */
+  }
+  
+  .spacer {
+    flex: 1; /* This will push the logo and title to the left */
+  }
+  
+  /* Main content styling */
+  main {
+    flex: 1;
+    margin-top: 400px;
+    padding-top: 250px;
   }
   
   section {
@@ -102,6 +107,7 @@ body {
     color: #555;
   }
   
+  /* Footer styling */
   footer {
     width: 100%;
     text-align: center;
@@ -120,14 +126,4 @@ body {
   
   footer a:hover {
     text-decoration: underline;
-  }
-  
-  main {
-    flex: 1;
-    margin-top: 400px;
-    padding-top: 250px;
-  }
-  
-  .spacer {
-    flex: 1; /* Balances the layout */
   }
