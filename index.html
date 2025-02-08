@@ -4,102 +4,110 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MealMatch</title>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    // Initialize EmailJS
-    emailjs.init("0PuAP4Yw9gwGQ-JFO");
-
-    // Function to send an email
-    function sendEmail(event) {
-      event.preventDefault();
-
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const message = document.getElementById("message").value;
-
-      emailjs.send("service_2co2gpe", "template_lipq3f1", {
-        name: name,
-        email: email,
-        message: message,
-      }).then(() => {
-        alert("Message sent successfully!");
-        document.getElementById("contact-form").reset();
-      }).catch(error => {
-        alert("Failed to send message: " + error.text);
-      });
-    }
-  </script>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-    }
-    header {
-      background-color: #4CAF50;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-    section {
-      padding: 1.5rem;
-    }
-    .qr-code img {
-      width: 200px;
-      height: 200px;
-    }
-    form {
-      max-width: 500px;
-      margin: 1rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    input, textarea, button {
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    button {
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <link rel="icon" type="image/png" href="MealMatchLogo.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>Welcome to MealMatch</h1>
+    <div class="logo-container">
+      <img src="MealMatchLogoIcon.png" alt="Logo" class="logo">
+      <h1 class="header-title">MealMatch</h1>
+    </div>
+    <div class="spacer"></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#download">Download</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#help">Help</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
   </header>
-  
-  <section>
-    <h2>About MealMatch</h2>
-    <p>Just an app that tries to make on-campus dining more affordable.</p>
-  </section>
-  
-  <section class="qr-code">
-    <h2>Download Our App</h2>
-    <p>Scan the QR code below or click the link to download:</p>
-    <img src="MealMatchLogo.png" alt="QR Code to download the app">
-    <p><a href="MealMatch Download Link" target="_blank">Download MealMatch</a></p>
-  </section>
-  
-  <section>
-    <h2>Contact Us</h2>
-    <form id="contact-form" onsubmit="sendEmail(event)">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+
+  <main>
+    <!-- Download The App section -->
+    <section id="download" class="qr-code">
+      <h2>MealMatch</h2>
+      <p>Student to Student Meal Exchange</p>
+      <img src="MealMatchLogo.png" alt="QR Code to download the app">
+      <p class="small-text">QR Code not working? Click <a href="MealMatch Download Link" target="_blank">here</a>.</p>
+    </section>
+
+    <!-- How It Works section -->
+    <section id="how-it-works">
+      <h2>How It Works</h2>
+      <div class="process">
+        <div class="buy-meal">
+          <h3>Buy Meal:</h3>
+          <ul>
+            <li><strong>List your VIP meal</strong>
+              <ul>
+                <li>Customize the VIP meal that you want in the app</li>
+              </ul>
+            </li>
+            <li><strong>Pay for the meal</strong>
+              <ul>
+                <li>Pay for the VIP meal in a secure environment created by Stripe</li>
+              </ul>
+            </li>
+            <li><strong>Wait for the meal to be ordered</strong>
+              <ul>
+                <li>Wait for the seller to find your VIP meal, order it on the Bama Dining app, and confirm that the VIP meal has been ordered in the app</li>
+              </ul>
+            </li>
+            <li><strong>Pick up your meal!</strong></li>
+          </ul>
+        </div>
+        <div class="sell-meal">
+          <h3>Sell Meal:</h3>
+          <ul>
+            <li><strong>Find a VIP meal</strong>
+              <ul>
+                <li>Look for a meal that has been listed</li>
+              </ul>
+            </li>
+            <li><strong>Order the meal in the Bama Dining app</strong>
+              <ul>
+                <li>Order the meal exactly as listed in the order from the buyer</li>
+              </ul>
+            </li>
+            <li><strong>Confirm that the meal has been ordered</strong>
+              <ul>
+                <li>Confirm in the MealMatch app with a screenshot of the receipt</li>
+              </ul>
+            </li>
+            <li><strong>Get paid</strong>
+              <ul>
+                <li>When the 4-hour complaint period ends, funds will be released to you</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us section -->
+    <section id="help">
+      <h2>Contact Us</h2>
+      <form id="contact-form" onsubmit="sendEmail(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="https://www.privacypolicies.com/live/c27eaadc-e241-48ce-be38-3be7315d7cdf" target="_blank">Privacy Policy</a></p>
+  </footer>
+
+  <!-- EmailJS Scripts -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
