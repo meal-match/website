@@ -16,8 +16,8 @@
     <div class="spacer"></div>
     <nav>
       <ul class="nav-links">
-        <li><a href="#how-it-works">How It Works</a></li>
-        <li><a href="#download">Download</a></li>
+        <li><a href="#download">Download</a></li> <!-- Updated order -->
+        <li><a href="#how-it-works">How It Works</a></li> <!-- Updated order -->
         <li><a href="#help">Contact</a></li>
       </ul>
       <div class="hamburger" onclick="toggleMenu()">
@@ -29,18 +29,21 @@
   </header>
 
   <main>
-    <section id="how-it-works">
-      <h2>Welcome to MealMatch!</h2>
-      <p>An app that tries to make on-campus dining more affordable.</p>
-    </section>
-    
+    <!-- Download The App section moved to the top -->
     <section id="download" class="qr-code">
       <h2>Download The App</h2>
       <p>Scan the QR code!</p>
       <img src="MealMatchLogo.png" alt="QR Code to download the app">
       <p class="small-text">QR Code not working? Click <a href="MealMatch Download Link" target="_blank">here</a>.</p>
     </section>
+
+    <!-- Welcome to MealMatch! section moved below -->
+    <section id="how-it-works">
+      <h2>Welcome to MealMatch!</h2>
+      <p>An app that tries to make on-campus dining more affordable.</p>
+    </section>
     
+    <!-- Contact Us section remains unchanged -->
     <section id="help">
       <h2>Contact Us</h2>
       <form id="contact-form" onsubmit="sendEmail(event)">
