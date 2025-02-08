@@ -171,7 +171,8 @@ body {
   .buy-meal ul li ul, .sell-meal ul li ul {
     margin-top: 0.5rem;
     margin-left: 2rem; /* Indent nested lists */
-    padding-left: 0; /* Remove default padding */
+    padding-left: 1rem; /* Add padding for the vertical line */
+    border-left: 2px solid rgba(0, 0, 0, 0.1); /* Faded gray vertical line */
   }
   
   .buy-meal ul li ul li, .sell-meal ul li ul li {
