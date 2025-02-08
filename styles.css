@@ -136,7 +136,7 @@ body {
   }
   
   /* How It Works section styling */
-.process {
+  .process {
     display: flex;
     gap: 2rem; /* Space between the two columns */
     margin-top: 1.5rem;
@@ -163,20 +163,28 @@ body {
   
   .buy-meal ul li, .sell-meal ul li {
     margin-bottom: 1rem;
-    padding-left: 1.5rem; /* Add indentation for main points */
-    position: relative; /* For custom bullet positioning */
+    padding-left: 0; /* Remove default padding */
+    display: flex; /* Align icon and text horizontally */
+    align-items: flex-start; /* Align items to the top */
   }
   
   .buy-meal ul li ul, .sell-meal ul li ul {
     margin-top: 0.5rem;
-    margin-left: 1.5rem; /* Indent nested lists */
+    margin-left: 2rem; /* Indent nested lists */
     padding-left: 0; /* Remove default padding */
   }
   
   .buy-meal ul li ul li, .sell-meal ul li ul li {
     margin-bottom: 0.5rem;
     color: #555;
-    padding-left: 1.5rem; /* Add indentation for subsentences */
+    padding-left: 0; /* Remove default padding */
+  }
+  
+  /* Icon styling */
+  .icon {
+    margin-right: 0.75rem; /* Space between icon and text */
+    color: #9E1B32; /* Match the header color */
+    font-size: 1.25rem; /* Adjust icon size */
   }
   
   /* Responsive layout for smaller screens */
