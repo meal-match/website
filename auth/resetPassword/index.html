@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Reset</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <a class="logo-container" href="/">
+            <img src="../../assets/MealMatchLogoIcon.png" alt="Logo" class="logo">
+            <h1 class="header-title">MealMatch</h1>
+        </a>
+        <div class="spacer"></div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Reset Your Password</h1>
+            <form id="reset-form">
+                <p id="message">Enter your new password below.</p>
+                <input type="password" id="password" placeholder="New Password" required>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <ul id="password-requirements"></ul>
+                <button type="submit" id="submit-button" disabled>Reset Password</button>
+            </form>
+            <p id="error-message"></p>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

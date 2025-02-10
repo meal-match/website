@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const message = document.getElementById("message");
 
-    // Get token from URL
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
 
