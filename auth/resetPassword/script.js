@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             submitButton.textContent = "Resetting password...";
             submitButton.disabled = true;
-            const response = await fetch("https://backend-red-seven-72.vercel.app/auth/reset-password", {
+            const response = await fetch("https://meal-match-backend.vercel.app/auth/reset-password", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

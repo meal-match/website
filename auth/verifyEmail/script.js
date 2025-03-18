@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     try {
-        const response = await fetch("https://backend-red-seven-72.vercel.app/auth/verify", {
+        const response = await fetch("https://meal-match-backend.vercel.app/auth/verify", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
